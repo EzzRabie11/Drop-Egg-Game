@@ -1,0 +1,124 @@
+@use "./abstracts/index" as *;
+ #Game{
+    nav{
+        @include respond(350px){
+            span , h5{
+            font-size: 18px;
+        }
+    }
+    }
+    height: 100vh;
+    overflow: hidden;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1e528e), color-stop(50%, #728a7c), to(#e9ce5d));
+    background-image: linear-gradient(to bottom, #1e528e, #728a7c, #e9ce5d);
+    #ChickenContainer{
+        position: relative;
+        height: 100px;
+        margin-top: 20px;
+        @include respond(350px){
+                height: 60px;
+                margin-top: 30px;
+             }
+             @include respond(650px){
+                height: 80px;
+             }
+             @include respond(1050px){
+                height: 100px;
+                margin-top: 20px;
+             }
+
+                &::before{
+                @include createEle($h:20px);
+                background-color: #333;
+                @include position($b:0%,$l:0);
+
+            }
+        .chicken {
+            @include position($t:0,$l:0);
+            transform: translateX(-50%);
+
+            @for $i from 0 through 3 {
+
+                &:nth-of-type(#{$i}){
+                    left: #{$i * 25%};
+                }
+            }
+            
+            i{
+                @include position($t:50%,$l:50%);
+                transform: translate(-50%,-50%);
+                color: white;
+            }
+            img{
+                width: 100px;
+                position: relative;
+             @include respond(350px){
+                width: 60px;
+             }
+             @include respond(650px){
+                width: 80px;
+             }
+             @include respond(1050px){
+                width: 100px;
+             }
+            
+        }
+            }
+        }
+   #Start{
+    @include position($t:50%, $l:0);
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 10px 0px;
+   }
+   #Basket{
+    @include position($b:30%,$l:0%);
+    width: fit-content;
+
+    span{
+        @include position($b:10%,$l:50%);
+        transform: translateX(-50%);
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    img{
+    width: 150px;
+   }
+}
+#BrokenEggContainer{
+        width: 100%;
+        @include position($b:25%,$l:0,$z:10);
+
+        .brokenEgg {
+            @include position($t:0,$l:0);
+            transform: translateX(-50%);
+            display: none;
+
+            @for $i from 0 through 3 {
+
+                &:nth-of-type(#{$i}){
+                    left: #{$i * 25%};
+                }
+            }
+            
+            img{
+                width: 100px;
+                position: relative;
+                @include respond(350px){
+                width: 60px;
+             }
+             @include respond(650px){
+                width: 80px;
+             }
+             @include respond(1050px){
+                width: 100px;
+             }
+            }
+        }
+    }
+footer{
+    @include position($b:0,$l:0);
+
+}
+ }

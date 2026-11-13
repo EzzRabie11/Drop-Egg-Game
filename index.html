@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drop Egg Game</title>
+  <link rel="stylesheet" href="./Css/bootstrap.css">
+  <link rel="stylesheet" href="./Css/all.min.css">
+  <link rel="stylesheet" href="./Css/index.css">
+  <link rel="icon" href="./DropEgg_Images/images/hen-right.png">
+  <meta name="keywords" content="HTML,CSS,bootstrap, javascript,Jquery,sass">
+  <meta name="description" content="Drop Egg game with jquery">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+
+  <div id="Game">
+    <nav class="text-center py-3 px-1 text-light bg-info">
+      <h5>
+        Score : <span class="score">0</span> |
+         <span class="text-danger">Life Score </span> : <span id="LifeScore">5</span> | 
+        Highest Score : <span id="HighestScore">0</span> | 
+        Use mouse to control
+      </h5>
+    </nav>
+
+    <div id="ChickenContainer">
+      <div class="chicken">
+        <i class="fas fa-egg egg" class="egg"></i>
+        <img src="./DropEgg_Images/images/hen-right.png" alt="">
+      </div>
+      <div class="chicken">
+        <i class="fas fa-egg egg" class="egg"></i>
+        <img src="./DropEgg_Images/images/hen-right.png" alt="">
+      </div>
+      <div class="chicken">
+        <i class="fas fa-egg egg" class="egg"></i>
+        <img src="./DropEgg_Images/images/hen-right.png" alt="">
+      </div>
+    </div>
+
+    <div id="Start" class="bg-success text-light">
+      <h4 class="text-center">Start Game</h4>
+    </div>
+
+    <div id="Basket">
+      <span class="score">0</span>
+      <img src="./DropEgg_Images/images/basket2.png" alt="">
+    </div> 
+    <div id="BrokenEggContainer">
+      <div class="brokenEgg">
+        <img src="./DropEgg_Images/images/brokenEgg.png" alt="">
+      </div>
+      <div class="brokenEgg">
+        <img src="./DropEgg_Images/images/brokenEgg.png" alt="">
+      </div>
+      <div class="brokenEgg">
+        <img src="./DropEgg_Images/images/brokenEgg.png" alt="">
+      </div>
+    </div>
+
+    <footer>
+      <img src="./DropEgg_Images/images/Easter-Eggs.png" class="img-fluid" alt="">
+    </footer>
+  </div>
+
+
+
+
+  <script src="./JS/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="./JS/functions.js"></script>
+  <script src="./JS/index.js"></script>
+</body>
+
+</html>
